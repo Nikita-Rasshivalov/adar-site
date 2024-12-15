@@ -1,0 +1,1 @@
+export const ContactDataURL = "./assets/data/contactData.json"

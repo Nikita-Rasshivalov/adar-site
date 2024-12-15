@@ -1,0 +1,45 @@
+{
+    "sections": [
+      {
+        "title": "Фармакология",
+        "photos": [
+          {
+            "src": "/publicContent/pharm.png",
+            "alt": "Фармакология 1",
+            "caption": "Инновационные лекарства"
+          },
+          {
+            "src": "/publicContent/pharm.png",
+            "alt": "Фармакология 2",
+            "caption": "Передовые технологии"
+          },
+          {
+            "src": "/publicContent/pharm.png",
+            "alt": "Фармакология 3",
+            "caption": "Эффективные решения"
+          }
+        ]
+      },
+      {
+        "title": "Косметология",
+        "photos": [
+          {
+            "src": "/publicContent/cosm.png",
+            "alt": "Косметология 1",
+            "caption": "Естественная красота"
+          },
+          {
+            "src": "/publicContent/cosm.png",
+            "alt": "Косметология 2",
+            "caption": "Инновационные формулы"
+          },
+          {
+            "src": "/publicContent/cosm.png",
+            "alt": "Косметология 3",
+            "caption": "Здоровье и уход"
+          }
+        ]
+      }
+    ]
+  }
+  

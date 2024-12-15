@@ -1,0 +1,819 @@
+@font-face {
+  font-family: "Trajan Pro";
+  src: url("/src/assets/fonts/TrajanPro-Bold.otf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Общий стиль для <header> */
+.header {
+  padding: 1rem 2rem;
+  background-color: #1a1a2e;
+  color: #ffffff;
+}
+
+/* Логотип */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Навигация */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+  background: none; 
+  border: none; 
+  cursor: pointer;
+  padding: 0; 
+}
+
+.nav-link:hover {
+  color: #00aaff;
+  outline: none;
+}
+
+.contact-button {
+  border: 1px solid #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #00aaff;
+  color: #ffffff;
+}
+
+.mid-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60vh;
+  background-color: #1a1a2e;
+  color: #ffffff;
+}
+
+.mid-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: "Trajan Pro", serif;
+}
+
+.midTitleScrolled.scrolled {
+  transform: translateY(-100px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mid-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.mid-button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mid-button:hover {
+  background-color: #0056b3;
+}
+
+.navigationPanel {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a2e; 
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для визуального разделения */
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+/* main */
+.main {
+  background-color: #fff;
+  color: #333;
+}
+
+.wrapper {
+  max-width: 62.5rem;
+  margin: 0 auto;
+  padding: 6vh 0;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-subtitle {
+  color: #0056b3;
+  font-weight: 600;
+  font-size: 1.563rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.625rem;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.3rem;
+}
+
+.about-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+.about-button {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  border: 2px solid #333;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.about-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.about-image img {
+  max-width: 23rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* photo section */
+.photo-sections {
+  padding: 2.5rem 5vw;
+  max-width: 75rem;
+  margin: 1.25rem auto;
+  background-color: #ffffff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.section {
+  margin-bottom: 3.75rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1a1a2e;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.photo-grid {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center; 
+  flex-wrap: wrap; /* Для адаптации на малых экранах */
+}
+
+.photo-item {
+  flex: 1 1 calc(33.33% - 1.25rem); /* Три изображения в ряду с отступами */
+  max-width: calc(33.33% - 1.25rem);
+  text-align: center;
+  background-color: #fff; /* Фон блока */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+  transform: translateY(-5px); /* Анимация при наведении */
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-caption {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+/* footer container */
+.wrapper-center {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.875rem;
+  padding: 1.25rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 62.5rem;
+  margin: 0 auto;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 1rem;
+  width: 50%;
+}
+
+.contactForm div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  padding: 0.625rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  height: 5rem;
+}
+
+.sendButton {
+  padding: 0.625rem 0.938rem;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sendButton:hover {
+  background-color: #0056b3;
+}
+
+/* Стили для футера */
+.footerContent {
+  background-color: #f9f9f9;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footerContent h3 {
+  font-size: 1.25rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.footerContent p {
+  font-size: 1.5rem;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+}
+
+.footerContent a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footerContent a:hover {
+  color: #0056b3;
+}
+
+.logoImgTxt {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.3vw;
+  flex-wrap: nowrap;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  position: relative;
+}
+
+.companyLogo {
+  position: absolute;
+  max-width: 1.5rem;
+  left: 71%;
+  top: 32%;
+}
+
+.bottom-logo-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  width: 100%;
+  background-color: #1a1a2e;
+}
+
+.companyName {
+  font-size: 1.5rem;
+  font-family: "Trajan Pro", serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.feedback-title {
+  margin-bottom: 1.25rem;
+  margin-left: 17rem;
+}
+
+.feedback-title h2 {
+  font-weight: bold;
+  color: #1a1a2e;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footerTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.313;
+  margin: 0;
+}
+
+.footerItem a {
+  font-size: 0.95rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footerItem a:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  margin-top: 4%;
+  width: 24px;
+  height: 24px;
+}
+
+.mailIcon {
+  margin-top: 10%;
+}
+
+/* media */
+
+/* Small (sm) – устройства от 320px */
+@media (min-width: 320px) {
+  .header {
+    padding: 0;
+  }
+
+  .navigationPanel {
+    position: relative;
+  }
+
+  .nav {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .logoImgTxt {
+    padding: 0;
+    margin: 0;
+  }
+
+  .companyLogo {
+    left: 100%;
+    top: 24%;
+  }
+
+  .midTitleScrolled {
+    margin-top: 0;
+  }
+
+  .mid-title {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .mid-section {
+    height: 5rem;
+  }
+
+  .mid-subtitle {
+    margin-bottom: 0;
+  }
+
+  .mid-button {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .about-title {
+    font-size: 1.2rem;
+  }
+
+  .about-image img {
+    max-width: 14rem;
+  }
+
+  .about-description {
+    text-align: justify;
+    word-break: break-all;
+  }
+
+  .wrapper {
+    padding: 6vh 0 0;
+  }
+
+  .photo-sections {
+    padding: 0;
+    max-width: 75rem;
+    margin: 0;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .section {
+    margin-bottom: 0;
+  }
+
+  .photo-grid {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .photo-item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc(33.33% - 1.25rem);
+    max-width: calc(80% - 1.25rem);
+    overflow: hidden;
+  }
+  /*  */
+
+  .footerContent p {
+    font-size: 1rem;
+  }
+
+  .feedback-title {
+    margin-bottom: 0;
+    margin-left: 1rem;
+  }
+
+  .wrapper-center {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feedback-title h2 {
+    font-size: 1.2rem;
+  }
+
+  .contactForm,
+  .footerContent {
+    width: 100%;
+  }
+
+  .icon {
+    margin-top: 0%;
+  }
+  .mailIcon {
+    margin-top: 3%;
+  }
+
+  .contactForm {
+    gap: 0.4rem;
+  }
+}
+
+@media (min-width: 425px) {
+  .mid-section {
+    height: 2rem;
+  }
+
+  .mid-subtitle {
+    margin-bottom: 0;
+  }
+  .mid-button {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  .about-image img {
+    max-width: 19rem;
+  }
+
+  .about-description {
+    text-align: start;
+    word-break: normal;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper {
+    padding: 6vh 0 0;
+  }
+
+  .photo-sections {
+    padding: 0;
+    max-width: 75rem;
+    margin: 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .section {
+    margin-bottom: 3.75rem;
+  }
+
+  .footerContent p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /*  */
+  .feedback-title {
+    margin-bottom: 0;
+    margin-left: 1rem;
+  }
+
+  .feedback-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .wrapper-center {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactForm,
+  .footerContent {
+    width: 100%;
+  }
+
+  .mailIcon {
+    margin-top: 10%;
+  }
+
+  .icon {
+    margin-top: 4%;
+  }
+
+  .contactForm {
+    gap: 1rem;
+  }
+  /*  */
+}
+
+/* Medium (md) – устройства от 768px */
+@media (min-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+  .navigationPanel {
+    position: fixed;
+  }
+
+  .about-section {
+    margin: 0 1rem;
+  }
+  .about-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .logoImgTxt {
+    padding: 1rem 5rem;
+  }
+
+  .nav {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .companyLogo {
+    left: 71%;
+    top: 32%;
+  }
+
+  .midTitleScrolled {
+    margin-top: 100px;
+    transition: transform 0.3s ease;
+  }
+
+  .mid-title {
+    font-size: 3rem;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .mid-section {
+    height: 60vh;
+  }
+
+  .mid-subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .mid-button {
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-direction: row;
+    padding: 0 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.563rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-image img {
+    max-width: 23rem;
+  }
+
+  .about-text {
+    display: block;
+  }
+  .wrapper {
+    padding: 6vh 0;
+  }
+
+  .photo-sections {
+    padding: 2.5rem 5vw;
+    max-width: 75rem;
+    margin: 1.25rem auto;
+  }
+
+  .photo-grid {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: normal;
+  }
+
+  .photo-item {
+    max-width: calc(33.33% - 1.25rem);
+    transition: transform 0.3s ease;
+  }
+
+  /*  */
+  .feedback-title {
+    margin-bottom: 1.25rem;
+    margin-left: 17rem;
+  }
+
+  .wrapper-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.875rem;
+    padding: 1.25rem;
+  }
+
+  .contactForm,
+  .footerContent {
+    width: 50%;
+  }
+  /*  */
+}
